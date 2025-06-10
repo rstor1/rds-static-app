@@ -83,6 +83,79 @@ body {
   border: 2px solid #fff;
 }
 
+.welcome-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: calc(100vw - 100px);
+  flex: 0 0 auto;
+  margin-top: 40px; // optional, for spacing from header
+  margin-right: 0;
+  //padding-right: 32px;
+
+    @media (max-width: 600px) {
+    justify-content: center;      // center on small screens
+    padding-right: 0;             // remove right padding
+    margin-top: 24px;             // optional: less top margin
+  }
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; // or center, as needed
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 24px;
+  box-sizing: border-box;
+  background: #FF9540;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+
+  @media (max-width: 600px) {
+    max-width: 100%;
+    padding: 24px 8px;
+    margin-left: 0;
+  }
+}
+
+.dividerTop {
+  border-top: 5px solid #696969;
+}
+
+.dividerTop,
+.dividerMiddle,
+.dividerBottom {
+  width: 380px;
+  border-top: 2px solid #696969;
+  align-self: center;
+}
+
+.dividerTop {
+  border-top: 5px solid #696969;
+}
+
+.dividerBottom {
+  border-top: 2px solid #696969;
+}
+
+.welcomeTitle {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: #696969;
+  margin: 0;
+}
+
+.welcomeText {
+  width: 362px;
+  line-height: 200%;
+  color: #696969;
+  margin: 0;
+}
+
 .audio-play-btn svg {
   color: #FF9540;
   transition: color 0.2s;
