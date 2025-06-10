@@ -82,26 +82,24 @@ body {
   border-radius: 50%;
   font-size: 2.5rem;
   font-weight: bold;
-  text-decoration: none;
   border: 2px solid #FF9540;
   box-shadow:
     0 0 0 0.05rem #696969,
     0 0 0 0.4375rem #FF9540; 
   transition: background 0.2s, color 0.2s;
+  text-shadow: 1px 2px 6px rgba(0,0,0,0.25);
   padding: 0;
   margin: 0;  
 }
 
-.circle-link:hover {
-  background: #FF9540;
-  color: #fff;
-  border: 2px solid #fff;
+.about-circle-link:hover {
+  color: #874c1b;
 }
 
 .welcome-wrapper {
   display: flex;
   justify-content: flex-end;
-  width: auto; // Remove 100% and max-width constraint
+  width: auto;
   max-width: none;
   flex: 0 0 auto;
   margin-top: 40px;
@@ -170,11 +168,17 @@ body {
   margin: 0;
 }
 
-.audio-play-btn svg {
-  color: #FF9540;
+.audio-play-btn {
+  color: #583416;
   transition: color 0.2s;
 }
 
 .audio-play-btn:hover svg {
   color: #fff;
+}
+
+.audio-play-btn,
+.audio-play-btn svg {
+  background: none !important;
+  background-color: transparent !important;
 }

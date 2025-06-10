@@ -1,7 +1,8 @@
 import { type FC, useEffect, useRef } from "react";
 import "./styles.scss";
 import { Link } from "react-router-dom";
-import { CgPlayButton, CgPlayPause } from "react-icons/cg";
+import { CgPlayPause } from "react-icons/cg";
+import { CiPlay1 } from "react-icons/ci";
 import { drawParabolicCurves } from "../utils/drawGeoLines";
 
 
@@ -72,7 +73,7 @@ return (
         autoPlay
       />
       <button onClick={handlePlay} className="audio-play-btn" aria-label="Play Audio">
-        <CgPlayButton size={20} />
+        <CiPlay1 size={20}/>
       </button>
       <button onClick={handlePause} className="audio-play-btn" aria-label="Pause Audio">
         <CgPlayPause size={20} />
