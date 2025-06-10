@@ -1,11 +1,13 @@
-import { type FC, useRef } from "react";
+import { type FC, useEffect, useRef } from "react";
 import "./styles.scss";
 import { Link } from "react-router-dom";
 import { CgPlayButton, CgPlayPause } from "react-icons/cg";
+import { drawParabolicCurves } from "../utils/drawGeoLines";
 
 
 const Home: FC = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   const handlePlay = () => {
     audioRef.current?.play();
@@ -15,9 +17,33 @@ const Home: FC = () => {
     audioRef.current?.pause();
   };
 
+    useEffect(() => {
+    if (canvasRef.current) {
+      drawParabolicCurves(canvasRef.current);
+    }
+  }, []);
+
 return (
   <div className="home-container">
     <header className="home-header"></header>
+    <div className="main-flex-row">
+<p
+  style={{
+    margin: 0,
+    padding: 0,
+    transform: "translateX(-20rem)" // Adjust value as needed
+  }}
+>
+  <canvas
+    className="geoLineCanvas"
+    ref={canvasRef}
+    id="canvas"
+    width={700}
+    height={600}
+  >
+    Your browser does not support the HTML5 canvas tag.
+  </canvas>
+</p>
     <div className="welcome-wrapper">
       <section className="welcome-section">
         <div className="dividerTop">&nbsp;</div>
@@ -30,6 +56,7 @@ return (
         </p>
         <div className="dividerBottom">&nbsp;</div>
       </section>
+    </div>
     </div>
     <main className="home-main">
       <div className="top-left-link-container">
@@ -45,10 +72,10 @@ return (
         autoPlay
       />
       <button onClick={handlePlay} className="audio-play-btn" aria-label="Play Audio">
-        <CgPlayButton size={32} />
+        <CgPlayButton size={20} />
       </button>
       <button onClick={handlePause} className="audio-play-btn" aria-label="Pause Audio">
-        <CgPlayPause size={32} />
+        <CgPlayPause size={20} />
       </button>
     </footer>
   </div>
