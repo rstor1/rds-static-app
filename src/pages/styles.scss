@@ -10,10 +10,39 @@ body {
   justify-content: center;
   width: 100%;
   padding: 0 2rem;
+  gap: 4rem;
+
   @media (max-width: 900px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
+    gap: 2rem;
     padding: 0 0.5rem;
+  }
+}
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+}
+
+.welcome-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+  max-width: none;
+  flex: 0 0 auto;
+  margin-top: 40px;
+  margin-right: 0;
+
+  @media (max-width: 600px) {
+    justify-content: center;
+    padding-right: 0;
+    margin-top: 24px;
   }
 }
 
@@ -96,22 +125,6 @@ body {
   color: #874c1b;
 }
 
-.welcome-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  width: auto;
-  max-width: none;
-  flex: 0 0 auto;
-  margin-top: 40px;
-  margin-right: 0;
-
-  @media (max-width: 600px) {
-    justify-content: center;
-    padding-right: 0;
-    margin-top: 24px;
-  }
-}
-
 .welcome-section {
   display: flex;
   flex-direction: column;
@@ -181,4 +194,9 @@ body {
 .audio-play-btn svg {
   background: none !important;
   background-color: transparent !important;
+}
+
+.geoLineCanvas {
+  width: auto;
+  height: auto;
 }

@@ -1,53 +1,64 @@
 export function drawParabolicCurves(canvas: HTMLCanvasElement) {
     if (!canvas) return;
-    const context1 = canvas.getContext("2d");
-    var x1 = 405;
-    var y1 = 0;
-    var x2 = 395;
-    var y2 = 0;
-    var x3 = 405;
-    var y3 = 600;
-    var x4 = 395;
-    var y4 = 600;
-    if (!context1) return;
-    for (var i = 0; y1 < 295; i++) {
-        context1.beginPath();
-        context1.moveTo(405, y1);
-        context1.lineTo(x1, 295);
-        context1.strokeStyle = "#696969";
-        context1.lineWidth = 0.25;
-        context1.stroke();
-        x1 += 4;
-        y1 += 4;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    const w = canvas.width;
+    const h = canvas.height;
+
+    // Use proportions instead of fixed numbers
+    let x1 = w * 0.58, y1 = 0;
+    let x2 = w * 0.56, y2 = 0;
+    let x3 = w * 0.58, y3 = h;
+    let x4 = w * 0.56, y4 = h;
+
+    const yLimit = h * 0.49;
+    const yStart = h * 0.51;
+    const xStep = w * 0.0057;
+    const yStep = h * 0.0067;
+
+    // First quadrant
+    for (let i = 0; y1 < yLimit; i++) {
+        ctx.beginPath();
+        ctx.moveTo(w * 0.58, y1);
+        ctx.lineTo(x1, yLimit);
+        ctx.strokeStyle = "#696969";
+        ctx.lineWidth = 0.25;
+        ctx.stroke();
+        x1 += xStep;
+        y1 += yStep;
     }
-    for (var i = 0; y2 < 295; i++) {
-        context1.beginPath();
-        context1.moveTo(395, y2);
-        context1.lineTo(x2, 295);
-        context1.strokeStyle = "#000000";
-        context1.lineWidth = 0.25;
-        context1.stroke();
-        x2 -= 4;
-        y2 += 4;
+    // Second quadrant
+    for (let i = 0; y2 < yLimit; i++) {
+        ctx.beginPath();
+        ctx.moveTo(w * 0.56, y2);
+        ctx.lineTo(x2, yLimit);
+        ctx.strokeStyle = "#000000";
+        ctx.lineWidth = 0.25;
+        ctx.stroke();
+        x2 -= xStep;
+        y2 += yStep;
     }
-    for (var i = 0; y3 > 305; i++) {
-        context1.beginPath();
-        context1.moveTo(405, y3);
-        context1.lineTo(x3, 305);
-        context1.strokeStyle = "#000000";
-        context1.lineWidth = 0.25;
-        context1.stroke();
-        x3 += 4;
-        y3 -= 4;
+    // Third quadrant
+    for (let i = 0; y3 > yStart; i++) {
+        ctx.beginPath();
+        ctx.moveTo(w * 0.58, y3);
+        ctx.lineTo(x3, yStart);
+        ctx.strokeStyle = "#000000";
+        ctx.lineWidth = 0.25;
+        ctx.stroke();
+        x3 += xStep;
+        y3 -= yStep;
     }
-    for (var i = 0; y4 > 305; i++) {
-        context1.beginPath();
-        context1.moveTo(395, y4);
-        context1.lineTo(x4, 305);
-        context1.strokeStyle = "#696969";
-        context1.lineWidth = 0.25;
-        context1.stroke();
-        x4 -= 4;
-        y4 -= 4;
+    // Fourth quadrant
+    for (let i = 0; y4 > yStart; i++) {
+        ctx.beginPath();
+        ctx.moveTo(w * 0.56, y4);
+        ctx.lineTo(x4, yStart);
+        ctx.strokeStyle = "#696969";
+        ctx.lineWidth = 0.25;
+        ctx.stroke();
+        x4 -= xStep;
+        y4 -= yStep;
     }
 }
