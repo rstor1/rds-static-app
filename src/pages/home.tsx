@@ -18,17 +18,17 @@ const Home: FC = () => {
     audioRef.current?.pause();
   };
 
-useEffect(() => {
-  function handleResize() {
-const width = Math.max(300, Math.min(window.innerWidth * 0.7, 900));
-const height = Math.max(200, Math.min(window.innerHeight * 0.8, 900));
-const size = Math.min(width, height);
-setCanvasSize({ width: size, height: size });
-  }
-  handleResize();
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
+  useEffect(() => {
+    function handleResize() {
+      const width = Math.max(300, Math.min(window.innerWidth * 0.7, 900));
+      const height = Math.max(200, Math.min(window.innerHeight * 0.8, 900));
+      const size = Math.min(width, height);
+      setCanvasSize({ width: size, height: size });
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (canvasRef.current) {
@@ -39,33 +39,33 @@ setCanvasSize({ width: size, height: size });
   return (
     <div className="home-container">
       <header className="home-header"></header>
-<div className="main-flex-row">
-  <p className="canvas-container"
-  >
-    <canvas
-      className="geoLineCanvas"
-      ref={canvasRef}
-      id="canvas"
-      width={canvasSize.width}
-      height={canvasSize.height}
-    >
-      Your browser does not support the HTML5 canvas tag.
-    </canvas>
-  </p>
-  <div className="welcome-wrapper">
-    <section className="welcome-section">
-      <div className="dividerTop">&nbsp;</div>
-      <h2 className="welcomeTitle">Welcome</h2>
-      <div className="dividerMiddle">&nbsp;</div>
-      <p className="welcomeText">
-        Welcome to my personal node of experimentation and interaction. The design you see to the left is line-stitching, which creates parabolic curves using only straight lines drawn with JavaScript inspired by inked line art I did some years back. Have a look around and enjoy.<br />
-        <br />
-        Technology: React - Typescript - Vite - SCSS
-      </p>
-      <div className="dividerBottom">&nbsp;</div>
-    </section>
-  </div>
-</div>
+      <div className="main-flex-row">
+        <p className="canvas-container"
+        >
+          <canvas
+            className="geoLineCanvas"
+            ref={canvasRef}
+            id="canvas"
+            width={canvasSize.width}
+            height={canvasSize.height}
+          >
+            Your browser does not support the HTML5 canvas tag.
+          </canvas>
+        </p>
+        <div className="welcome-wrapper">
+          <section className="welcome-section">
+            <div className="dividerTop">&nbsp;</div>
+            <h2 className="welcomeTitle">Welcome</h2>
+            <div className="dividerMiddle">&nbsp;</div>
+            <p className="welcomeText">
+              Welcome to my personal node of experimentation and interaction. The design you see to the left (or below depending on screen size) is line-stitching, which creates parabolic curves using only straight lines drawn with JavaScript. Inspired by inked line art I did some years back. Have a look around and enjoy.<br />
+              <br />
+              Technology: React - Typescript - Vite - SCSS
+            </p>
+            <div className="dividerBottom">&nbsp;</div>
+          </section>
+        </div>
+      </div>
       <main className="home-main">
         <div className="top-left-link-container">
           <Link to="/about" className="about-circle-link">
