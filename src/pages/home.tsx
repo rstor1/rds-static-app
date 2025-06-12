@@ -43,11 +43,11 @@ export const Home: FC = () => {
           <Link to="/about" className="about-circle-link">
             A
           </Link>
-          <Link to="/dummy" className="dummy-circle-link">
-            D
-          </Link>
           <Link to="/black-hole" className="black-hole-circle-link">
             BH
+          </Link>
+          <Link to="/dummy" className="dummy-circle-link">
+            D
           </Link>
         </div>
       </header>
@@ -70,7 +70,7 @@ export const Home: FC = () => {
               <h2 className="welcomeTitle">Welcome</h2>
               <div className="dividerMiddle">&nbsp;</div>
               <p className="welcomeText">
-                Welcome to my personal node of experimentation and interaction. The design you see to the left (or below depending on screen size) is line-stitching, which creates parabolic curves using only straight lines drawn with JavaScript. Inspired by inked line art I did some years back. Have a look around and enjoy.<br />
+                Welcome to my personal node of experimentation and interaction. The design you see to the left (or below depending on screen size) is line-stitching, which creates parabolic curves using only straight lines drawn with TypeScript. Inspired by inked line art I did some years back. Have a look around and enjoy.<br />
                 <br />
                 Technology: React - Typescript - Vite - SCSS
               </p>
