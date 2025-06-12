@@ -38,19 +38,13 @@ export const Home: FC = () => {
 
   return (
     <div className="home-container">
-      <header className="home-header">
-        <div className="left-menu-container">
-          <Link to="/about" className="about-circle-link">
-            A
-          </Link>
-          <Link to="/black-hole" className="black-hole-circle-link">
-            BH
-          </Link>
-          <Link to="/dummy" className="dummy-circle-link">
-            D
-          </Link>
-        </div>
-      </header>
+    <header className="home-header">
+    </header>
+    <aside className="left-menu">
+      <Link to="/about" className="about-circle-link">A</Link>
+      <Link to="/black-hole" className="black-hole-circle-link">BH</Link>
+      <Link to="/dummy" className="dummy-circle-link">D</Link>
+    </aside>
       <main className="home-main">
         <div className="main-flex-row">
           <p className="canvas-container">
