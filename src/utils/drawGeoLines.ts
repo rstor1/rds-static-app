@@ -5,6 +5,7 @@ export function drawParabolicCurves(canvas: HTMLCanvasElement) {
 
     const w = canvas.width;
     const h = canvas.height;
+    console.log("canvas.width", w, "canvas.height", h);
 
     // Use proportions instead of fixed numbers
     let x1 = w * 0.58, y1 = 0;

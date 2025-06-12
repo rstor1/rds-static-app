@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from './pages/home'
+import { Home } from './pages/home'
 import About from './pages/about';
 
 function App() {
 
   return (
-    <BrowserRouter basename="/rds-static-app">
+    <BrowserRouter basename="/rds-static-app/">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>

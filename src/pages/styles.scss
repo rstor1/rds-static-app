@@ -33,6 +33,7 @@ body {
   width: auto;
   flex: 0 0 auto;
   margin: 0;
+  margin-left: 30px;
   padding: 0;
 }
 
@@ -95,16 +96,16 @@ body {
 
 .home-header {
   min-height: 60px;
-  padding: 1.5rem 1rem;
+  /* Remove text-align and justify-content center */
+  padding: 32px 0 0 32px; // Top and left padding to mimic absolute position
   font-weight: bold;
   font-size: 1.5rem;
   background: #FF9540;
   color: #fff;
-  text-align: center;
   border-bottom: 1px solid #696969;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;    // Align items to the top
+  justify-content: flex-start; // Align items to the left
   box-sizing: border-box;
 }
 
@@ -120,14 +121,43 @@ body {
   justify-content: center;
 }
 
-.top-left-link-container {
-  position: absolute;
-  top: 32px;
-  left: 32px;
+.left-menu-container {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: flex-start;
   z-index: 10;
+  margin-top: 0;
+  margin-left: 0;
+  gap: 12px;
+}
+
+.dummy-circle-static {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #FF9540;
+  background: #FF7100;
+  color: #FF9540;
+  margin-top: 12px;
+  align-self: center;
+  box-shadow:
+    0 0 0 0.05rem #696969,
+    0 0 0 0.4375rem #FF9540;
+}
+
+.bh-circle-static {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #FF9540;
+  background: #FF7100;
+  color: #FF9540;
+  margin-top: 12px;
+  align-self: center;
+  box-shadow:
+    0 0 0 0.05rem #696969,
+    0 0 0 0.4375rem #FF9540;
 }
 
 .about-circle-link {
