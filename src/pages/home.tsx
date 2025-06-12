@@ -43,8 +43,12 @@ export const Home: FC = () => {
           <Link to="/about" className="about-circle-link">
             A
           </Link>
-          <div className="dummy-circle-static" />
-          <div className="bh-circle-static" />
+          <Link to="/dummy" className="dummy-circle-link">
+            D
+          </Link>
+          <Link to="/black-hole" className="black-hole-circle-link">
+            BH
+          </Link>
         </div>
       </header>
       <main className="home-main">

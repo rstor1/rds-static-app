@@ -132,34 +132,36 @@ body {
   gap: 12px;
 }
 
-.dummy-circle-static {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 2px solid #FF9540;
-  background: #FF7100;
-  color: #FF9540;
-  margin-top: 12px;
-  align-self: center;
-  box-shadow:
-    0 0 0 0.05rem #696969,
-    0 0 0 0.4375rem #FF9540;
-}
+// .dummy-circle-link {
+//   width: 100px;
+//   height: 100px;
+//   border-radius: 50%;
+//   border: 2px solid #FF9540;
+//   background: #FF7100;
+//   color: #FF9540;
+//   margin-top: 12px;
+//   align-self: center;
+//   box-shadow:
+//     0 0 0 0.05rem #696969,
+//     0 0 0 0.4375rem #FF9540;
+// }
 
-.bh-circle-static {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 2px solid #FF9540;
-  background: #FF7100;
-  color: #FF9540;
-  margin-top: 12px;
-  align-self: center;
-  box-shadow:
-    0 0 0 0.05rem #696969,
-    0 0 0 0.4375rem #FF9540;
-}
+// .black-hole-circle-link {
+//   width: 100px;
+//   height: 100px;
+//   border-radius: 50%;
+//   border: 2px solid #FF9540;
+//   background: #FF7100;
+//   color: #FF9540;
+//   margin-top: 12px;
+//   align-self: center;
+//   box-shadow:
+//     0 0 0 0.05rem #696969,
+//     0 0 0 0.4375rem #FF9540;
+// }
 
+.black-hole-circle-link,
+.dummy-circle-link,
 .about-circle-link {
   display: flex;
   align-items: center;
@@ -182,6 +184,8 @@ body {
   margin: 0;
 }
 
+.black-hole-circle-link:hover,
+.dummy-circle-link:hover,
 .about-circle-link:hover {
   color: #874c1b;
 }
