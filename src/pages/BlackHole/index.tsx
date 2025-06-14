@@ -15,7 +15,7 @@ export const BlackHole: FC = () => {
                 width={1155}
                 height={620}
             />
-            <audio autoPlay loop src="src/assets/thecryofblackhole.mp3">
+            <audio autoPlay loop src="audio/thecryofblackhole.mp3">
                 Your browser does not support the audio element.
             </audio>
         </>
