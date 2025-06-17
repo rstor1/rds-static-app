@@ -270,6 +270,8 @@ html, body {
 @media (max-width: 600px) {
   html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
   }
 
@@ -278,6 +280,33 @@ html, body {
     flex-direction: column;
     min-height: 100vh;
     overflow-y: auto;
+    position: relative;
+  }
+
+  .main-flex-row {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  .left-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5rem;
+    position: static; // remove fixed/absolute
+    z-index: 1;
+  }
+
+  .left-menu .menu-item {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.8rem;
   }
 
   .home-header,
@@ -289,20 +318,12 @@ html, body {
   }
 
   .home-main {
-    flex: 1 1 auto;
+    flex-grow: 1;
+    padding: 0.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    padding: 0.5rem;
     overflow-y: auto;
-  }
-
-  .main-flex-row {
-    flex-direction: column-reverse;
-    gap: 1rem;
-    width: 100%;
-    padding: 0;
   }
 
   .geoLineCanvas {
@@ -310,19 +331,16 @@ html, body {
     max-height: 30vh !important;
     height: auto !important;
     object-fit: contain;
+    //comment
   }
 
   .welcome-section {
     padding: 0.5rem;
-    text-align: center;
     font-size: 0.95rem;
     line-height: 1.4;
-    max-width: 95vw;
-  }
-
-  .left-menu {
-    width: clamp(2.5rem, 18vw, 4rem);
-    padding-top: 0.5rem;
+    text-align: center;
+    z-index: 0;
   }
 }
+
 
