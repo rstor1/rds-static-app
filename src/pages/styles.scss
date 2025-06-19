@@ -46,6 +46,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow-y: auto;
+  min-height: 0;
 }
 
 .main-flex-row {
@@ -56,6 +57,8 @@ body {
   padding: 0 2rem;
   gap: 1rem;
   background: #FF9540;
+  max-width: calc(100vw - 4.5rem);
+  margin-left: 4.5rem;
 }
 
 .canvas-container {
