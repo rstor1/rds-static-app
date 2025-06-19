@@ -38,16 +38,15 @@ export const Home: FC = () => {
 
   return (
     <div className="home-container">
-    <header className="home-header">
-    </header>
-    <aside className="left-menu">
-      <Link to="/about" className="about-circle-link">A</Link>
-      <Link to="/black-hole" className="black-hole-circle-link">BH</Link>
-      <Link to="/dummy" className="dummy-circle-link">D</Link>
-    </aside>
+      <header className="home-header"></header>
+      <aside className="left-menu">
+        <Link to="/about" className="about-circle-link">A</Link>
+        <Link to="/black-hole" className="black-hole-circle-link">BH</Link>
+        <Link to="/dummy" className="dummy-circle-link">D</Link>
+      </aside>
       <main className="home-main">
         <div className="main-flex-row">
-          <p className="canvas-container">
+          <div className="canvas-container">
             <canvas
               className="geoLineCanvas"
               ref={canvasRef}
@@ -57,7 +56,7 @@ export const Home: FC = () => {
             >
               Your browser does not support the HTML5 canvas tag.
             </canvas>
-          </p>
+          </div>
           <div className="welcome-wrapper">
             <section className="welcome-section">
               <div className="dividerTop">&nbsp;</div>
