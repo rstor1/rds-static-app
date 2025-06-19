@@ -59,6 +59,7 @@ body {
   background: #FF9540;
   max-width: calc(100vw - 4.5rem);
   margin-left: 4.5rem;
+  overflow: hidden;
 }
 
 .canvas-container {
@@ -188,6 +189,13 @@ body {
     gap: 1rem;
   }
 
+.welcomeText {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: center;
+  max-width: 100%;
+}
+
   .geoLineCanvas {
     max-width: 90vw;
     max-height: 25vh;
@@ -223,5 +231,6 @@ body {
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
   }
 }
