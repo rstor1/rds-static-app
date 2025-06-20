@@ -192,8 +192,8 @@ body {
   }
 
   .geoLineCanvas {
-    max-width: 88vw;
-    max-height: 22vh;
+    max-width: 90vw;
+    max-height: 25vh; // increase slightly if too small, or clamp to 22vh
     height: auto;
   }
 
@@ -225,16 +225,25 @@ body {
   overflow: hidden;
 }
 
+// .home-main {
+//   flex: 1 1 auto;
+//   overflow-y: auto;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   align-items: center;
+//   padding: 0.5rem;
+//   box-sizing: border-box;
+// }
+
 .home-main {
-  flex: 1 1 auto;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   padding: 0.5rem;
-  box-sizing: border-box;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow-y: auto;
+  max-height: calc(100dvh - 8rem); // adjust based on actual header + footer height
 }
+
 
 .home-footer {
   background: #FF9540;
