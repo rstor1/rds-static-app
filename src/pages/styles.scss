@@ -218,23 +218,21 @@ body {
 }
 
 
+// .home-container {
+//   height: 100dvh;
+//   display: flex;
+//   flex-direction: column;
+//   overflow: hidden;
+// }
+
 .home-container {
   height: 100dvh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-// .home-main {
-//   flex: 1 1 auto;
-//   overflow-y: auto;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   align-items: center;
-//   padding: 0.5rem;
-//   box-sizing: border-box;
-// }
 
 .home-main {
   padding: 0.5rem;
