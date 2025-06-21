@@ -198,44 +198,65 @@ body {
   }
 
   .welcome-wrapper {
-    justify-content: center;
-    width: 100%;
-  }
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden; // prevent horizontal scroll/cutoff
+}
 
-  .welcome-section {
-    max-width: 92vw;
-    padding: 0.5rem 0.5rem;
-    align-items: center;
-    font-size: 0.9rem;
-    gap: 0.4rem;
-  }
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 90vw; // slightly tighter than 92vw to match padding
+  padding: 0.5rem;
+  align-items: center;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
 
 .welcomeText {
   font-size: 0.85rem;
   line-height: 1.3;
   text-align: center;
-  max-width: 85vw; /* matches safe width inside dividers */
+  width: 100%;
+  max-width: 100%;
+  padding: 0 0.5rem; // add horizontal padding for breathing room
+  box-sizing: border-box; // ensures padding doesn't exceed width
   word-wrap: break-word;
   overflow-wrap: break-word;
-  padding: 0 0.25rem;;
-  margin-top: -0.25rem; /* pulls it slightly up toward the middle divider */
-
-    //   max-width: 90vw;
-    // word-wrap: break-word;
-    // overflow-wrap: break-word;
-    // white-space: normal;
-    // padding: 0 0.25rem;
-    // font-size: 0.85rem;
-    // line-height: 1.3;
-    // text-align: center;
+  word-break: break-word;
+  margin-top: -0.25rem;
 }
+
+
+  // .welcome-wrapper {
+  //   justify-content: center;
+  //   width: 100%;
+  // }
+
+  // .welcome-section {
+  //   max-width: 92vw;
+  //   padding: 0.5rem 0.5rem;
+  //   align-items: center;
+  //   font-size: 0.9rem;
+  //   gap: 0.4rem;
+  // }
+
+// .welcomeText {
+//   font-size: 0.85rem;
+//   line-height: 1.3;
+//   text-align: center;
+//   max-width: 85vw; /* matches safe width inside dividers */
+//   word-wrap: break-word;
+//   overflow-wrap: break-word;
+//   padding: 0 0.25rem;;
+//   margin-top: -0.25rem; /* pulls it slightly up toward the middle divider */
+// }
 
   .dividerMiddle {
     margin-bottom: 0.2rem;
   }
-
-
-
 
 .home-container {
   height: 100dvh;
