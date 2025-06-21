@@ -204,75 +204,87 @@ body {
   overflow: hidden; // prevent horizontal scroll/cutoff
 }
 
+// .welcome-section {
+//   display: flex;
+//   flex-direction: column;
+//   max-width: 90vw; // slightly tighter than 92vw to match padding
+//   padding: 0.5rem;
+//   align-items: center;
+//   text-align: center;
+//   overflow-wrap: break-word;
+//   word-break: break-word;
+// }
+
 .welcome-section {
   display: flex;
   flex-direction: column;
-  max-width: 90vw; // slightly tighter than 92vw to match padding
-  padding: 0.5rem;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.5rem 1rem; // breathing room on both sides
   align-items: center;
   text-align: center;
-  overflow-wrap: break-word;
-  word-break: break-word;
+  box-sizing: border-box;
 }
 
 .welcomeText {
   font-size: 0.85rem;
-  line-height: 1.3;
+  line-height: 1.4;
   text-align: center;
-  width: 100%;
-  max-width: 100%;
-  padding: 0 0.5rem; // add horizontal padding for breathing room
-  box-sizing: border-box; // ensures padding doesn't exceed width
+  padding: 0;
+  margin: 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
   word-break: break-word;
-  margin-top: -0.25rem;
 }
 
-
-  // .welcome-wrapper {
-  //   justify-content: center;
-  //   width: 100%;
-  // }
-
-  // .welcome-section {
-  //   max-width: 92vw;
-  //   padding: 0.5rem 0.5rem;
-  //   align-items: center;
-  //   font-size: 0.9rem;
-  //   gap: 0.4rem;
-  // }
 
 // .welcomeText {
 //   font-size: 0.85rem;
 //   line-height: 1.3;
 //   text-align: center;
-//   max-width: 85vw; /* matches safe width inside dividers */
+//   width: 100%;
+//   max-width: 100%;
+//   padding: 0 0.5rem; // add horizontal padding for breathing room
+//   box-sizing: border-box; // ensures padding doesn't exceed width
 //   word-wrap: break-word;
 //   overflow-wrap: break-word;
-//   padding: 0 0.25rem;;
-//   margin-top: -0.25rem; /* pulls it slightly up toward the middle divider */
+//   word-break: break-word;
+//   margin-top: -0.25rem;
 // }
 
   .dividerMiddle {
     margin-bottom: 0.2rem;
   }
 
-.home-container {
-  height: 100dvh;
+  .home-container {
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
-
 
 .home-main {
+  flex: 1 1 auto;
   padding: 0.5rem;
-  flex-grow: 1;
-  flex-shrink: 1;
   overflow-y: auto;
-  max-height: calc(100dvh - 8rem); // adjust based on actual header + footer height
+  min-height: 0;
 }
+
+
+// .home-container {
+//   height: 100dvh;
+//   display: flex;
+//   flex-direction: column;
+//   overflow: hidden;
+// }
+
+
+// .home-main {
+//   padding: 0.5rem;
+//   flex-grow: 1;
+//   flex-shrink: 1;
+//   overflow-y: auto;
+//   max-height: calc(100dvh - 8rem); // adjust based on actual header + footer height
+// }
 
 
 .home-footer {
