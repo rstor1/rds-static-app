@@ -1,7 +1,7 @@
 import { type FC, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { CgPlayPause } from "react-icons/cg";
 import { CiPlay1 } from "react-icons/ci";
+import { CgPlayPause } from "react-icons/cg";
 import { drawParabolicCurves } from "../utils/drawGeoLines";
 import "./styles.scss";
 
@@ -38,12 +38,20 @@ export const Home: FC = () => {
 
   return (
     <div className="home-container">
-      <header className="home-header"></header>
+      <header className="home-header">
+        <div className="header-circle-links">
+          <Link to="/about" className="about-circle-link">A</Link>
+          <Link to="/black-hole" className="black-hole-circle-link">BH</Link>
+          <Link to="/dummy" className="dummy-circle-link">D</Link>
+        </div>
+      </header>
+
       <aside className="left-menu">
         <Link to="/about" className="about-circle-link">A</Link>
         <Link to="/black-hole" className="black-hole-circle-link">BH</Link>
         <Link to="/dummy" className="dummy-circle-link">D</Link>
       </aside>
+
       <main className="home-main">
         <div className="main-flex-row">
           {/* <div className="canvas-container">
@@ -72,6 +80,7 @@ export const Home: FC = () => {
           </div> */}
         </div>
       </main>
+
       <footer className="home-footer">
         <audio
           ref={audioRef}
