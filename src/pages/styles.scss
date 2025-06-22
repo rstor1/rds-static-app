@@ -146,6 +146,8 @@ body {
   }
 
   .home-header {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 1rem);
+    z-index: 10;
     justify-content: center;
     flex-wrap: wrap;
     border-bottom: none;
@@ -167,6 +169,8 @@ body {
   }
 
   .home-footer {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 1rem);
+    z-index: 10;
     padding: 0.75rem 0.5rem;
     font-size: 1rem;
   }
