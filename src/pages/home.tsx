@@ -46,7 +46,7 @@ export const Home: FC = () => {
       </aside>
       <main className="home-main">
         <div className="main-flex-row">
-          <div className="canvas-container">
+          {/* <div className="canvas-container">
             <canvas
               className="geoLineCanvas"
               ref={canvasRef}
@@ -69,7 +69,7 @@ export const Home: FC = () => {
               </p>
               <div className="dividerBottom">&nbsp;</div>
             </section>
-          </div>
+          </div> */}
         </div>
       </main>
       <footer className="home-footer">
